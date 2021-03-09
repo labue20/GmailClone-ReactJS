@@ -1,8 +1,9 @@
 import React from 'react'
+import Header from './component/layout/Header'
 
 function App() {
   return (
-    <h1>Welcome</h1>
+   <Header/>
   )
 }
 
