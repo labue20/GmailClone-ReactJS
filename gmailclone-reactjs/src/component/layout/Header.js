@@ -15,8 +15,9 @@ function Header() {
             <LogoWrapper>
             
                     <Menu>
-                        <MenuIcon/>  
+                    
                     </Menu>
+                    <MenuIcon/>  
                     <Logo>
                         <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_2x_r2.png"/>
                     </Logo>
@@ -24,9 +25,10 @@ function Header() {
 
             <SearchWrapper>
                 <SearchBarWrapper>
-                        <SearchIcon/>
+                        <SearchIconWrapper/>
+                        {/*<SearchIcon/>*/}
                         <input type='text' placeholder='Search Mail'/>
-                        <ExpandMoreIcon/>
+                        <ExpandMoreIcon />
                 </SearchBarWrapper>
             </SearchWrapper>
 
@@ -45,7 +47,7 @@ export default Header
 
 const Wrapper = styled.div`
     display: grid;
-    grid-template-columns: 27% auto 17%;
+    grid-template-columns: 270px auto 170px;
     border-bottom: 1px solid lightgray;
     height: 70px;
     align-items: center;
@@ -77,15 +79,20 @@ const SearchBarWrapper = styled.div`
     background-color: #f1f3f4;
     width: 100%;
     max-width: 750px;
-    display: grid:
+    display: grid;
     grid-template-columns: 10% auto 7%;
     place-items: center;
     height: 45px;
     border-radius: 6px;
+    
 
+    MuiSvgIcon-rrot{
+        color: #5f6368;
+    }
+    
     input {
-        width: 100%;
-        height: 30px;
+        width: 90%;
+        height: 20px;
         background: none;
         border: none;
         font-size: 18px;
@@ -96,5 +103,14 @@ const SearchBarWrapper = styled.div`
     }
 `
 const IconsWrapper = styled.div`
+    display:grid;
+    grid-template-columns: repeat(4, auto);
 
+    .MusiSvgIcon-root{
+        color: #5f6368;
+    }
+
+`
+const SearchIconWrapper = styled(SearchIcon)`
+    color: #5f6368;
 `
