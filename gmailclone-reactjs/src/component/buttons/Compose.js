@@ -16,7 +16,7 @@ export default compose
 const Wrapper = styled.div`
     display: grid;
     grid-template-columns:35% auto;
-    width: 150px;
+    width: 100px;
     
     align-items: center;
     padding: 6px 32px 6px 8px;
@@ -26,8 +26,9 @@ const Wrapper = styled.div`
     color:#3c4043;
     font-weight: 500;
     font-size: 0.875rem;
-    padding-left: 50px;
-    
+    padding-left: 20px;
+    transition: box-shadow .08s linear,min-width .15s cubic-bezier(0.4,0.0,0.2,1);
+
     :hover{
         box-shadow: 0 1px 3px 0 rgb(60 64 67 / 30%), 0 4px 8px 3px rgb(60 64 67 / 15%);
         background-color: #fafafb;
