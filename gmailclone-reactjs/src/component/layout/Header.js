@@ -13,32 +13,28 @@ function Header() {
     return (
         <Wrapper>
             <LogoWrapper>
-            
-                    <Menu>
-                    
-                    </Menu>
-                    <MenuIcon/>  
-                    <Logo>
-                        <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_2x_r2.png"/>
-                    </Logo>
+                <Menu>
+                    <MenuIcon/>
+                </Menu> 
+                <Logo>
+                    <img src='https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_2x_r2.png' />
+                </Logo>   
             </LogoWrapper>
 
             <SearchWrapper>
                 <SearchBarWrapper>
-                        <SearchIconWrapper/>
-                        {/*<SearchIcon/>*/}
-                        <input type='text' placeholder='Search Mail'/>
-                        <ExpandMoreIcon />
+                    <SearchIconWrapper />
+                    <input type='text' placeholder='Search mail'/>
+                    <ExpandMoreIcon/>
                 </SearchBarWrapper>
             </SearchWrapper>
 
-                    <IconsWrapper>
-                         <HelpOutlineIcon/>
-                         <SettingsIcon/>
-                         <AppsIcon/>
-                         <AccountCircleIcon/>
-                    </IconsWrapper>
-            
+            <IconsWrapper>
+                <HelpOutlineIcon />
+                <SettingsIcon />
+                <AppsIcon />
+                <AccountCircleIcon />
+            </IconsWrapper>
         </Wrapper>
     )
 }
@@ -55,25 +51,24 @@ const Wrapper = styled.div`
 const LogoWrapper = styled.div`
     height: 45px;
     display: grid;
-    grid-template-columns: 25% auto:
-    
+    grid-template-columns: 25% auto;
 `
-const Logo = styled.div`
-    display: flex;
-    height: 45px;
-    
-    
-`
+
+const SearchIconWrapper = styled(SearchIcon)` 
+    color: #5f6368;
+`    
+
 const Menu = styled.div`
     display: grid;
     place-items: center;
-    
-
 `
-const SearchWrapper = styled.div`
 
-   
+const Logo = styled.div`
+    display: flex;
+    height: 45px;
 `
+
+const SearchWrapper = styled.div``
 
 const SearchBarWrapper = styled.div`
     background-color: #f1f3f4;
@@ -84,34 +79,26 @@ const SearchBarWrapper = styled.div`
     place-items: center;
     height: 45px;
     border-radius: 6px;
-    
-
-    MuiSvgIcon-rrot{
+    .MuiSvgIcon-root{
         color: #5f6368;
     }
-    
     input {
-        width: 90%;
-        height: 20px;
+        width: 100%;
+        height: 30px;
         background: none;
         border: none;
         font-size: 18px;
-
-        :focus {
+        :focus{
             outline: none;
         }
     }
 `
+
 const IconsWrapper = styled.div`
     margin-left: 8px;
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(4, auto);
-
-    .MusiSvgIcon-root{
+    .MuiSvgIcon-root{
         color: #5f6368;
     }
-
-`
-const SearchIconWrapper = styled(SearchIcon)`
-    color: #5f6368;
 `
