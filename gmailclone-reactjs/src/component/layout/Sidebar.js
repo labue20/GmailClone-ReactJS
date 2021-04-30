@@ -14,131 +14,107 @@ const Sidebar = () => {
         <Wrapper>
             <TopSectionWrapper>
                 <ComposeWrapper>
-                    {/*Compose button*/}
-                    <Compose/>
+                    <Compose />
                 </ComposeWrapper>
 
-                <sideButtonWrapper>
-
+                <SideButtonsWrapper>
                     {
                         sidebarButtonItems.map(item =>(
                             <SidebarButtonItem>{item.icon} {item.text}</SidebarButtonItem>
                         ))
                     }
-                
-                </sideButtonWrapper>
+                </SideButtonsWrapper>
             </TopSectionWrapper>
 
             <BottomSectionWrapper>
-            
-                        
-                <SideBarSectionWrapper>
-                    <Title> <b>Meet</b></Title>
-                    <p> <VideocamIcon/>New Meeting</p>
-                    <p> <KeyboardIcon/> Join Meeting</p>
-                </SideBarSectionWrapper>
+                <SidebarSectionWrapper>
+                    <Title>Meet</Title>
+                    <p><VideocamIcon/> New Meeting</p>
+                    <p><KeyboardIcon/> Join Meeting</p>
+                </SidebarSectionWrapper>
 
-
-                <SideBarSectionWrapper>
+                <SidebarSectionWrapper>
                     <Title>Hangouts</Title>
-                    <p> <AccountCircleIcon/> Wilfred Labue</p>
-                
-                </SideBarSectionWrapper>
+                    <p><AccountCircleIcon/> David Rakosi</p>
+                </SidebarSectionWrapper>
 
-        
-                <BottomwIconsWrapper>
-                        {
-                            bottomIcons.map(icon => (
-                                <>
-                                    {icon}
-                                </>
-                            ))
-                        }
-                    
-                </BottomwIconsWrapper>
-
+                <BottomIconsWrapper>
+                    {
+                        bottomIcons.map(icon => (
+                            <>
+                                {icon}
+                            </>
+                        ))
+                    }
+                </BottomIconsWrapper>
             </BottomSectionWrapper>
+
         </Wrapper>
     )
 }
 
 export default Sidebar
 
-const TopSectionWrapper = styled.div`
-   
-`
-
 const Wrapper = styled.div`
     border-right: 1px solid lightgray;
-    height: calc(100vh - 19vh);
+    height: calc(100vh - 70px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
-
-
 `
+
+const BottomSectionWrapper = styled.div`
+    margin-bottom: 30px;
+`
+
+const TopSectionWrapper = styled.div``
+
 const ComposeWrapper = styled.div`
     display: grid;
     place-items: start;
     padding: 10px 20px;
-    
 `
 
-const sideButtonWrapper = styled.div`
+const SideButtonsWrapper = styled.div``
 
-`
-const SideBarSectionWrapper = styled.div`
-  
-    border-top: 1px solid lightgray;
-    
-    p {
-        color: gray;
-        display: grid;
-        grid-template-columns: 3% auto;
-        height: 30px;
-        align-items: center;
-        padding-left: 25px; 
-    }
-    
-`
-const BottomSectionWrapper = styled.div`
-    margin-bottom: 10px;
-`
-const Title = styled.div`
-    padding-left: 25px;
-   
-    margin-bottom: 4px;
-    margin-top: 8px;
-`
-const HangoutWrapper = styled.div`
-
-`
-const BottomwIconsWrapper = styled.div`
-    display: flex;
-    justify-content: center;
-    color:gray;
-    border-top: 1px solid lightgray;
-    margin-top:10px;
-
-    .MuiSvgIcon-root{
-        padding:2px;
-
-    }
-
-`
 const SidebarButtonItem = styled.div`
     display: grid;
-    grid-template-columns: 3% auto ;
+    grid-template-columns: 14% auto;
     color: gray;
     padding: 5px 25px;
-
     border-radius: 0 100px 100px 0;
     cursor: pointer;
     margin-right: 8px;
-  
-
     :hover{
-        background-color: #f5f7f7;
+        background-color: #f5f7f7
+    }
+`
+
+const SidebarSectionWrapper = styled.div`
+    border-top: 1px solid lightgray;
+    p {
+        color: gray;
+        display: grid;
+        grid-template-columns: 14% auto;
+        height: 30px;
+        align-items: center;
+        padding-left: 25px;
+    }
+`
+
+const Title = styled.h4`
+    padding-left: 25px;
+    margin-bottom: 4px;
+    margin-top: 8px;
+`
+
+const BottomIconsWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    color: gray;
+    border-top: 1px solid lightgray;
+    margin-top: 60px;
+    .MuiSvgIcon-root{
+        padding: 2px;
     }
 `
