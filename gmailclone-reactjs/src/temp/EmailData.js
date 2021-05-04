@@ -4,7 +4,7 @@ export const emailData = [
         starred: true,
         from: 'Naz',
         subject: 'Heyy',
-        received: 'how you bro',
+        received: '8:20',
         read: true
     },
 
@@ -12,15 +12,15 @@ export const emailData = [
         starred: true,
         from: 'will',
         subject: 'Heyy',
-        received: 'how you bro',
-        read: true
+        received: '8:20',
+        read: false
     },
 
     {
-        starred: true,
+        starred: false,
         from: 'Naz',
         subject: 'Heyy',
-        received: 'how you bro',
+        received: '8:20',
         read: true
     }
 
